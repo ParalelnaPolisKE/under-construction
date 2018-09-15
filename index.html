@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="refresh" content="3; url=https://www.paralelnapoliskosice.sk">
   <title>Paralelná Polis Košice 🚧</title>
   <style>
     body {
@@ -89,10 +90,24 @@
       <a href="https://twitter.com/parallelpoliske">twitter</a> ·
       <a href="https://www.instagram.com/paralelnapoliske">instagram</a>
     </small>
+    <p>
+      o <strong><span id="timer"></span>s</strong> budete presmerovaný</p>
   </footer>
 
   <script>
     'use strict';
+
+    (function () {
+      var timer = document.getElementById('timer');
+      var timeToRedirect = 3;
+
+      timer.textContent = timeToRedirect;
+
+      var timerContent = setInterval(function () {
+        timer.textContent = timer.textContent - 1;
+      }, 1000);
+
+    })();
 
     (function () {
       var logo = document.querySelector('.logo');
